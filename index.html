@@ -24,12 +24,14 @@
         <span></span>
       </label>
 
+         <!-- Classe do menu -->
       <nav class="nav-main">
         <ul class="nav-list">
           <li class="nav-item"><a href="#">Home</a></li>
           <li class="nav-item"><a href="#artigos">Artigos</a></li>
           <li class="nav-item"><a href="#dicas">Dicas</a></li>
           <li class="nav-item"><a href="#produtos">Produtos</a></li>
+          <li class="nav-item"><a href="#faq">FAQ</a></li>
           <li class="nav-item"><a href="#contato">Contato</a></li>
         </ul>
       </nav>
@@ -118,11 +120,14 @@
 
     <!-- Sidebar lateral -->
     <aside class="sidebar">
+
+     <!-- Sobre nós -->
       <div class="widget">
-        <h4 class="widget-title">TechBlog</h4>
+        <h4 class="widget-title">Sobre nós</h4>
         <p>Blog dedicado a entusiastas em tecnologia e educação, com conteúdo acessível e atualizado.</p>
       </div>
 
+    <!-- Posts recentes -->
       <div class="widget">
         <h4 class="widget-title">Posts recentes</h4>
         <ul class="widget-list">
@@ -134,271 +139,241 @@
     </aside>
   </main>
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <!-- =================== META CONFIGURAÇÕES BÁSICAS =================== -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TechBlog – Inovações & Tecnologia</title>
+  <!-- =================== SEÇÃO DE DICAS =================== -->
+  <section id="dicas" class="section">
+    <h2>Dicas de Tecnologia</h2>
 
-  <!-- =================== CSS EXTERNO =================== -->
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <!-- Mural de dicas -->
+    <div class="dicas-mural">
 
-  <!-- =========================== CABEÇALHO COM MENU HAMBÚRGUER ============================ -->
-  <header class="site-header">
-    <div class="header-inner">
-      <h1 class="logo">TechBlog</h1>
-
-      <!-- Checkbox para controlar o menu no mobile -->
-      <input type="checkbox" id="menu-toggle" class="menu-toggle">
-      <label for="menu-toggle" class="menu-icon">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
-
-      <nav class="nav-main">
-        <ul class="nav-list">
-          <li class="nav-item"><a href="#">Home</a></li>
-          <li class="nav-item"><a href="#artigos">Artigos</a></li>
-          <li class="nav-item"><a href="#dicas">Dicas</a></li>
-          <li class="nav-item"><a href="#produtos">Produtos</a></li>
-          <li class="nav-item"><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- =========================== BANNER DESTAQUE ============================ -->
-  <section class="banner">
-    <div class="banner-content">
-      <h2>Explorando o futuro da tecnologia</h2>
-      <p>Fique por dentro das novidades em desenvolvimento, IA e inovação digital.</p>
-    </div>
-  </section>
-
-  <!-- =========================== CONTEÚDO PRINCIPAL ============================ -->
-  <main class="main-content" id="artigos">
-
-    <!-- Área de posts -->
-    <section class="posts">
-      <h2>Bem-vindo ao TechBlog</h2>
-
-      <!-- Post 1 -->
-      <article class="post">
-        <img src="https://files.tecnoblog.net/wp-content/uploads/2015/09/0a0hnvqh1ju.jpg" alt="Robôs no dia a dia">
-        <h3 class="post-title">Robôs no dia a dia</h3>
-        <p class="post-excerpt">Como os robôs serão incorporados em 2025?</p>
-        <a href="https://blog.pixelfreestudio.com/creating-complex-layouts-with-css-flexbox/" class="read-more">Leia mais →</a>
-      </article>
-
-      <!-- Post 2 -->
-      <article class="post">
-        <img src="https://otecnico.org/wp-content/uploads/2023/09/image-18-1024x576.png" alt="CSS Grid e Flexbox">
-        <h3 class="post-title">Guia de CSS Grid e Flexbox combinados</h3>
-        <p class="post-excerpt">Como combinar Flexbox e Grid para layouts modernos e responsivos.</p>
-        <a href="https://otecnico.org/aprendendo-css-fundamentos-essenciais-do-grid-e-flexbox/" class="read-more">Leia mais →</a>
-      </article>
-
-      <!-- Post 3 -->
-      <article class="post">
-        <img src="https://www.dgaz.com.br/wp-content/uploads/2024/03/Gemini-IA-2-1-jpg.webp" alt="Google IA">
-        <h3 class="post-title">Google anuncia avanços em IA</h3>
-        <p class="post-excerpt">Novas técnicas de aprendizado e redes neurais transformam o mercado.</p>
-        <a href="https://www.terra.com.br/byte/google-aponta-avanco-historico-de-ia-mas-especialistas-questionam-impacto-real,6df698f7883f0157187a04ce92c4c97erlx9ph3r.html" class="read-more">Leia mais →</a>
-      </article>
-
-      <!-- Post 4 -->
-      <article class="post">
-        <img src="https://t.ctcdn.com.br/lmtzy3jnwi92B3_e77CWbrg9dFM=/1200x675/smart/i945559.jpeg" alt="Processadores Mobile">
-        <h3 class="post-title">Estreia de processadores mobile</h3>
-        <p class="post-excerpt">Intel revelará CPUs Panther Lake e novos Xeon na Tech Tour 2025.</p>
-        <a href="https://canaltech.com.br/hardware/intel-revelara-cpus-panther-lake-e-novos-xeon-na-tech-tour-2025-em-outubro/" class="read-more">Leia mais →</a>
-      </article>
-
-      <!-- Post 5 -->
-      <article class="post">
-        <img src="https://tremdimensional4d.com.br/blog/wp-content/uploads/2024/08/Impressao-3D.jpg" alt="Impressão 3D">
-        <h3 class="post-title">Impressão 3D no futuro</h3>
-        <p class="post-excerpt">Mercado de impressão 3D abre espaço para pequenas empresas.</p>
-        <a href="https://sebrae.com.br/sites/PortalSebrae/sebraeaz/impressao-3d-abre-espaco-para-novos-modelos-de-negocio,371160df0f451510VgnVCM1000004c00210aRCRD" class="read-more">Leia mais →</a>
-      </article>
-
-      <!-- Post 6 -->
-      <article class="post">
-        <img src="https://img.soy-chile.cl/Fotos/2024/05/27/file_20240527114558.jpg" alt="ChatGPT e menores">
-        <h3 class="post-title">ChatGPT e o uso por menores</h3>
-        <p class="post-excerpt">Nova atualização permite controle parental e alertas para pais.</p>
-        <a href="https://g1.globo.com/inovacao/noticia/2025/09/30/chatgpt-agora-permite-controlar-o-uso-por-menores-e-avisa-pais-sobre-conversas-sensiveis-saiba-como-ativar.ghtml" class="read-more">Leia mais →</a>
-      </article>
-
-      <!-- Post 7 -->
-      <article class="post">
-        <img src="https://s2-g1.glbimg.com/tO_4LItTFOQTV3xJHB7fY89sWqg=/0x0:1200x728/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2025/G/k/tl7BBKQwi6mQACPyFtjA/fotojet-30-.jpg" alt="TikTok EUA">
-        <h3 class="post-title">TikTok nos EUA</h3>
-        <p class="post-excerpt">Entenda os planos de Trump para controlar o aplicativo chinês.</p>
-        <a href="https://g1.globo.com/economia/noticia/2025/09/26/entenda-os-planos-de-trump-para-controlar-o-tiktok.ghtml" class="read-more">Leia mais →</a>
-      </article>
-
-      <!-- Post 8 -->
-      <article class="post">
-        <img src="https://redacao.rhpravoce.com.br/wp-content/uploads/2024/09/IA-e-o-impacto-no-trabalho-IMG-I.png" alt="IA no trabalho">
-        <h3 class="post-title">Uso de IA no trabalho</h3>
-        <p class="post-excerpt">Empresas brasileiras ampliam uso de IA de 16,9% para 41,9% em dois anos.</p>
-        <a href="https://g1.globo.com/trabalho-e-carreira/noticia/2025/09/24/uso-de-inteligencia-artificial-no-trabalho-na-industria-brasileira-ibge.ghtml" class="read-more">Leia mais →</a>
-      </article>
-    </section>
-
-    <!-- Sidebar lateral -->
-    <aside class="sidebar">
-      <div class="widget">
-        <h4 class="widget-title">TechBlog</h4>
-        <p>Blog dedicado a entusiastas em tecnologia e educação, com conteúdo acessível e atualizado.</p>
-      </div>
-
-      <div class="widget">
-        <h4 class="widget-title">Posts recentes</h4>
-        <ul class="widget-list">
-          <li><a href="https://www.apple.com/br/iphone-17-pro/">Apple lança novo iPhone</a></li>
-          <li><a href="https://www.cnnbrasil.com.br/tecnologia/veja-como-a-realidade-virtual-pode-finalmente-mudar-de-vez-o-entretenimento/">Realidade Virtual em crescimento</a></li>
-          <li><a href="https://tecnoblog.net/noticias/opera-lanca-neon-navegador-por-assinatura-com-ia-para-realizar-tarefas/">Opera lança Neon, navegador com IA</a></li>
-        </ul>
-      </div>
-    </aside>
-  </main>
-
-<!-- =================== SEÇÃO DE DICAS =================== -->
-    <section id="dicas" class="section">
-        <h2>Dicas de Tecnologia</h2>
-
-        <!-- Mural de dicas -->
-        <div class="dicas-mural">
-
-             <!-- Dica 10 -->
-            <div class="dica-card">
-                <h3>Organize seus arquivos digitais</h3>
-                <div class="dica-texto">
-                    <p>Manter arquivos bem organizados evita perda de dados e facilita a localização de documentos importantes.</p>
-                    <p>Dica prática: combine armazenamento em nuvem e HD externo.</p>
-                    <a href="dica1.html" class="btn-secondary">Ler mais</a>
-                </div>
-            </div>
-
-            
-            <!-- Dica 2 -->
-            <div class="dica-card">
-                <h3>Mantenha seus dispositivos atualizados</h3>
-                <div class="dica-texto">
-                    <p>Atualizações de sistema e software corrigem falhas de segurança e melhoram o desempenho. Configure atualizações automáticas sempre que possível.</p>
-                    <p>Além disso, atualizar drivers e aplicativos garante compatibilidade com novos recursos.</p>
-                    <a href="dica2.html" class="btn-secondary">Ler mais</a>
-                </div>
-            </div>
-
-            <!-- Dica 3 -->
-            <div class="dica-card">
-                <h3>Proteja suas senhas</h3>
-                <div class="dica-texto">
-                    <p>Utilize senhas fortes, diferentes para cada serviço e considere um gerenciador de senhas para maior segurança. Evite datas de nascimento ou palavras comuns.</p>
-                    <p>Ative autenticação de dois fatores sempre que disponível.</p>
-                    <a href="dica3.html" class="btn-secondary">Ler mais</a>
-                </div>
-            </div>
-
-            <!-- Dica 4 -->
-            <div class="dica-card">
-                <h3>Otimize o desempenho do seu PC</h3>
-                <div class="dica-texto">
-                    <p>Feche aplicativos desnecessários, limpe arquivos temporários e utilize ferramentas de otimização de sistema. Isso ajuda seu computador a funcionar de forma mais rápida e eficiente.</p>
-                    <p>Dica extra: mantenha o antivírus atualizado e faça verificações regulares.</p>
-                    <a href="dica4.html" class="btn-secondary">Ler mais</a>
-                </div>
-            </div>
-
-            <!-- Dica 5 -->
-            <div class="dica-card">
-                <h3>Aprenda atalhos de teclado</h3>
-                <div class="dica-texto">
-                    <p>Dominar atalhos aumenta sua produtividade. Por exemplo, Ctrl+C e Ctrl+V para copiar e colar, Alt+Tab para alternar entre janelas, e Ctrl+Shift+T para reabrir abas fechadas.</p>
-                    <p>Estude atalhos específicos para cada software que você usa frequentemente.</p>
-                    <a href="dica5.html" class="btn-secondary">Ler mais</a>
-                </div>
-            </div>
-
-            <!-- Dica 6 -->
-            <div class="dica-card">
-                <h3>Backup regular é essencial</h3>
-                <div class="dica-texto">
-                    <p>Perder dados importantes pode ser desastroso. Crie uma rotina de backup usando serviços em nuvem, HD externo ou ambos.</p>
-                    <p>Dica prática: automatize os backups para não depender da lembrança manual.</p>
-                    <a href="dica6.html" class="btn-secondary">Ler mais</a>
-                </div>
-            </div>
-
-            <!-- Dica 7 -->
-            <div class="dica-card">
-                <h3>Escolha antivírus confiável</h3>
-                <div class="dica-texto">
-                    <p>Proteja seu computador contra malwares, ransomwares e vírus usando softwares de segurança confiáveis.</p>
-                    <p>Combine antivírus com práticas seguras de navegação para máxima proteção.</p>
-                    <a href="dica7.html" class="btn-secondary">Ler mais</a>
-                </div>
-            </div>
-
-            <!-- Dica 8 -->
-            <div class="dica-card">
-                <h3>Use armazenamento em nuvem</h3>
-                <div class="dica-texto">
-                    <p>Serviços de nuvem facilitam o acesso a arquivos de qualquer lugar e colaboram com equipes remotas.</p>
-                    <p>Dica extra: escolha provedores confiáveis e habilite autenticação de dois fatores.</p>
-                    <a href="dica8.html" class="btn-secondary">Ler mais</a>
-                </div>
-            </div>
-
-            <!-- Dica 9 -->
-            <div class="dica-card">
-                <h3>Aprenda a limpar hardware</h3>
-                <div class="dica-texto">
-                    <p>Limpar fisicamente computadores, notebooks e periféricos aumenta a vida útil e mantém o desempenho.</p>
-                    <p>Utilize pincéis, ar comprimido e panos antiestáticos para evitar danos.</p>
-                    <a href="dica9.html" class="btn-secondary">Ler mais</a>
-                </div>
-            </div>
-
+      <!-- Dica 1 -->
+      <div class="dica-card">
+        <h3>Organize seus arquivos digitais</h3>
+        <div class="dica-texto">
+          <p>Manter arquivos bem organizados evita perda de dados e facilita a localização de documentos importantes.</p>
+          <p>Dica prática: combine armazenamento em nuvem e HD externo.</p>
         </div>
-    </section>
+      </div>
+
+      <!-- Dica 2 -->
+      <div class="dica-card">
+        <h3>Mantenha seus dispositivos atualizados</h3>
+        <div class="dica-texto">
+          <p>Atualizações de sistema e software corrigem falhas de segurança e melhoram o desempenho. Configure atualizações automáticas sempre que possível.</p>
+          <p>Além disso, atualizar drivers e aplicativos garante compatibilidade com novos recursos.</p>
+        </div>
+      </div>
+
+      <!-- Dica 3 -->
+      <div class="dica-card">
+        <h3>Proteja suas senhas</h3>
+        <div class="dica-texto">
+          <p>Utilize senhas fortes, diferentes para cada serviço e considere um gerenciador de senhas para maior segurança. Evite datas de nascimento ou palavras comuns.</p>
+          <p>Ative autenticação de dois fatores sempre que disponível.</p>
+        </div>
+      </div>
+
+      <!-- Dica 4 -->
+      <div class="dica-card">
+        <h3>Otimize o desempenho do seu PC</h3>
+        <div class="dica-texto">
+          <p>Feche aplicativos desnecessários, limpe arquivos temporários e utilize ferramentas de otimização de sistema. Isso ajuda seu computador a funcionar de forma mais rápida e eficiente.</p>
+          <p>Dica extra: mantenha o antivírus atualizado e faça verificações regulares.</p>
+        </div>
+      </div>
+
+      <!-- Dica 5 -->
+      <div class="dica-card">
+        <h3>Aprenda atalhos de teclado</h3>
+        <div class="dica-texto">
+          <p>Dominar atalhos aumenta sua produtividade. Por exemplo, Ctrl+C e Ctrl+V para copiar e colar, Alt+Tab para alternar entre janelas, e Ctrl+Shift+T para reabrir abas fechadas.</p>
+          <p>Estude atalhos específicos para cada software que você usa frequentemente.</p>
+        </div>
+      </div>
+
+      <!-- Dica 6 -->
+      <div class="dica-card">
+        <h3>Backup regular é essencial</h3>
+        <div class="dica-texto">
+          <p>Perder dados importantes pode ser desastroso. Crie uma rotina de backup usando serviços em nuvem, HD externo ou ambos.</p>
+          <p>Dica prática: automatize os backups para não depender da lembrança manual.</p>
+        </div>
+      </div>
+
+      <!-- Dica 7 -->
+      <div class="dica-card">
+        <h3>Escolha antivírus confiável</h3>
+        <div class="dica-texto">
+          <p>Proteja seu computador contra malwares, ransomwares e vírus usando softwares de segurança confiáveis.</p>
+          <p>Combine antivírus com práticas seguras de navegação para máxima proteção.</p>
+        </div>
+      </div>
+
+      <!-- Dica 8 -->
+      <div class="dica-card">
+        <h3>Use armazenamento em nuvem</h3>
+        <div class="dica-texto">
+          <p>Serviços de nuvem facilitam o acesso a arquivos de qualquer lugar e colaboram com equipes remotas.</p>
+          <p>Dica extra: escolha provedores confiáveis e habilite autenticação de dois fatores.</p>
+        </div>
+      </div>
+
+      <!-- Dica 9 -->
+      <div class="dica-card">
+        <h3>Aprenda a limpar hardware</h3>
+        <div class="dica-texto">
+          <p>Limpar fisicamente computadores, notebooks e periféricos aumenta a vida útil e mantém o desempenho.</p>
+          <p>Utilize pincéis, ar comprimido e panos antiestáticos para evitar danos.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
   <!-- =================== SEÇÃO PRODUTOS =================== -->
   <section id="produtos" class="section">
     <h2>Produtos e Serviços</h2>
     <div class="produtos-grid">
+
       <div class="produto">
         <h3>Plano Básico</h3>
         <p>Acesso a conteúdos exclusivos.</p>
         <p><strong>R$ 19,90/mês</strong></p>
         <a href="#" class="btn">Assinar</a>
       </div>
+
       <div class="produto">
         <h3>Plano Avançado</h3>
         <p>Inclui tutoriais premium e suporte.</p>
         <p><strong>R$ 39,90/mês</strong></p>
         <a href="#" class="btn">Assinar</a>
       </div>
+
       <div class="produto">
         <h3>Plano Profissional</h3>
         <p>Todos os recursos + consultoria personalizada.</p>
         <p><strong>R$ 99,90/mês</strong></p>
         <a href="#" class="btn">Assinar</a>
       </div>
+
       <div class="produto">
         <h3>Plano Empresarial</h3>
         <p>Treinamentos e suporte para empresas.</p>
         <p><strong>R$ 199,90/mês</strong></p>
         <a href="#" class="btn">Assinar</a>
       </div>
+    </div>
+  </section>
+
+  <!-- =================== SEÇÃO FAQ =================== -->
+  <section id="faq" class="section">
+    <h2>Perguntas Frequentes (FAQ)</h2>
+    <div class="faq-container">
+
+      <!-- Pergunta 1 -->
+      <div class="faq-item">
+        <input type="checkbox" id="faq1" class="faq-toggle">
+        <label for="faq1" class="faq-question">
+          O que é o TechBlog?
+          <span class="faq-icon">+</span>
+        </label>
+        <div class="faq-answer">
+          <p>O TechBlog é uma plataforma dedicada a compartilhar as últimas novidades em tecnologia, desenvolvimento, inteligência artificial e inovação digital. 
+            Nosso objetivo é tornar o conhecimento tecnológico acessível para todos.</p>
+        </div>
+      </div>
+
+      <!-- Pergunta 2 -->
+      <div class="faq-item">
+        <input type="checkbox" id="faq2" class="faq-toggle">
+        <label for="faq2" class="faq-question">
+          Como posso assinar a newsletter?
+          <span class="faq-icon">+</span>
+        </label>
+        <div class="faq-answer">
+          <p>Basta rolar até a seção de newsletter na parte inferior da página, inserir seu email no campo indicado e clicar em "Inscrever". 
+            Você receberá atualizações semanais com nossos melhores conteúdos.</p>
+        </div>
+      </div>
+
+      <!-- Pergunta 3 -->
+      <div class="faq-item">
+        <input type="checkbox" id="faq3" class="faq-toggle">
+        <label for="faq3" class="faq-question">
+          Os conteúdos são gratuitos?
+          <span class="faq-icon">+</span>
+        </label>
+        <div class="faq-answer">
+          <p>Sim! A maioria dos nossos artigos e dicas são totalmente gratuitos. Oferecemos também planos premium com conteúdos exclusivos, tutoriais avançados e 
+            suporte personalizado para quem deseja aprofundar seus conhecimentos.</p>
+        </div>
+      </div>
+
+      <!-- Pergunta 4 -->
+      <div class="faq-item">
+        <input type="checkbox" id="faq4" class="faq-toggle">
+        <label for="faq4" class="faq-question">
+          Com que frequência novos artigos são publicados?
+          <span class="faq-icon">+</span>
+        </label>
+        <div class="faq-answer">
+          <p>Publicamos novos artigos semanalmente, sempre trazendo as notícias mais recentes do mundo da tecnologia. 
+            Assinantes premium têm acesso antecipado a todo conteúdo exclusivo.</p>
+        </div>
+      </div>
+
+      <!-- Pergunta 5 -->
+      <div class="faq-item">
+        <input type="checkbox" id="faq5" class="faq-toggle">
+        <label for="faq5" class="faq-question">
+          Posso sugerir temas para artigos?
+          <span class="faq-icon">+</span>
+        </label>
+        <div class="faq-answer">
+          <p>Com certeza! Adoramos ouvir nossos leitores. Entre em contato conosco através da seção de contato ou envie um email diretamente. 
+            Todas as sugestões são bem-vindas e analisadas pela nossa equipe editorial.</p>
+        </div>
+      </div>
+
+      <!-- Pergunta 6 -->
+      <div class="faq-item">
+        <input type="checkbox" id="faq6" class="faq-toggle">
+        <label for="faq6" class="faq-question">
+          Qual a diferença entre os planos de assinatura?
+          <span class="faq-icon">+</span>
+        </label>
+        <div class="faq-answer">
+          <p>O Plano Básico oferece acesso a conteúdos exclusivos. O Plano Avançado inclui tutoriais premium e suporte. O Plano Profissional 
+            tem todos os recursos mais consultoria personalizada. Já o Plano Empresarial é voltado para empresas, com treinamentos e suporte dedicado.</p>
+        </div>
+      </div>
+
+      <!-- Pergunta 7 -->
+      <div class="faq-item">
+        <input type="checkbox" id="faq7" class="faq-toggle">
+        <label for="faq7" class="faq-question">
+          Como posso cancelar minha assinatura?
+          <span class="faq-icon">+</span>
+        </label>
+        <div class="faq-answer">
+          <p>Você pode cancelar sua assinatura a qualquer momento através da área do usuário. Não há multas ou taxas de cancelamento. 
+            O acesso aos conteúdos premium permanece ativo até o final do período já pago.</p>
+        </div>
+      </div>
+
+      <!-- Pergunta 8 -->
+      <div class="faq-item">
+        <input type="checkbox" id="faq8" class="faq-toggle">
+        <label for="faq8" class="faq-question">
+          Vocês oferecem certificados nos cursos?
+          <span class="faq-icon">+</span>
+        </label>
+        <div class="faq-answer">
+          <p>Sim! Assinantes dos planos Profissional e Empresarial recebem certificados digitais ao completar nossos cursos e tutoriais. 
+            Os certificados podem ser compartilhados no LinkedIn e outros perfis profissionais.</p>
+        </div>
+      </div>
+
     </div>
   </section>
 

@@ -158,8 +158,10 @@ a:hover {
 
 .post img {
   width: 100%;
-  border-radius: 6px;
-  margin-bottom: 10px;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 2px;
+  margin-bottom: 5px;
 }
 
 .post-title {
@@ -300,6 +302,81 @@ a:hover {
 }
 
 /* ======================================
+   SEÇÃO FAQ
+====================================== */
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  border-color: #007bff;
+}
+
+.faq-toggle {
+  display: none;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+  user-select: none;
+  transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+  background-color: #f8f9fa;
+}
+
+.faq-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+  transition: transform 0.3s;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 20px;
+}
+
+.faq-answer p {
+  color: #555;
+  line-height: 1.8;
+}
+
+.faq-toggle:checked + .faq-question + .faq-answer {
+  max-height: 500px;
+  padding: 0 20px 20px 20px;
+}
+
+.faq-toggle:checked + .faq-question .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-toggle:checked + .faq-question {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+}
+
+/* ======================================
    NEWSLETTER
 ====================================== */
 .newsletter {
@@ -414,5 +491,10 @@ a:hover {
 
   .newsletter-form {
     flex-direction: column;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+    padding: 15px;
   }
 }
