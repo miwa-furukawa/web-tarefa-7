@@ -1,500 +1,721 @@
-/* ======================================
-   CONFIGURAÇÕES GLOBAIS / BOX MODEL
-====================================== */
+/* ======================= CONFIGURAÇÕES GLOBAIS / BOX MODEL ======================== */
+
+/* Reset CSS universal - Remove espaçamentos padrão do navegador */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0;        /* MARGIN: Remove margem externa de todos elementos */
+  padding: 0;       /* PADDING: Remove espaçamento interno de todos elementos */
+  box-sizing: border-box;  /* Box model alternativo (width inclui padding e border) */
 }
 
+/* Estilo do corpo da página */
 body {
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f2f2f2;
+  font-family: 'Segoe UI', Tahoma, sans-serif;  /* CONTENT: Fonte principal com fallbacks */
+  font-size: 16px;                               /* Tamanho base da fonte */
+  line-height: 1.6;                              /* Altura da linha (160% do tamanho da fonte) */
+  color: #333;                                   /* Cor do texto (cinza escuro) */
+  background-color: #f2f2f2;                     /* Cor de fundo (cinza claro) */
 }
 
+/* Estilo global para links */
 a {
-  color: #007bff;
-  text-decoration: none;
-  transition: 0.3s;
+  color: #007bff;              /* Cor azul padrão para links */
+  text-decoration: none;       /* Remove sublinhado padrão */
+  transition: 0.3s;           /* Transição suave para hover effects */
 }
+
 a:hover {
-  text-decoration: underline;
+  text-decoration: underline;  /* Adiciona sublinhado ao passar mouse */
 }
 
-/* ======================================
-   CABEÇALHO + MENU
-====================================== */
+/* ================ CABEÇALHO + MENU ====================== */
+/* Container externo do cabeçalho */
 .site-header {
-  background-color: #222;
-  color: #fff;
-  padding: 15px 0;
+  background-color: #222;   /* CONTENT: Fundo preto/cinza escuro */
+  color: #fff;              /* Texto branco */
+  padding: 15px 0;          /* PADDING: 15px vertical, 0 horizontal */
 }
 
+/* Container interno centralizado do header */
 .header-inner {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
+  width: 90%;                    /* CONTENT: Largura de 90% da viewport */
+  max-width: 1200px;            /* CONTENT: Largura máxima de 1200px */
+  margin: 0 auto;               /* MARGIN: Centraliza horizontalmente */
+  
+  /* === FLEXBOX: Alinhamento do logo e menu === */
+  display: flex;                /* Ativa Flexbox */
+  align-items: center;          /* Alinha itens verticalmente ao centro */
+  justify-content: space-between; /* Distribui espaço entre logo e nav */
+  position: relative;           /* Para posicionamento do menu mobile */
 }
 
+/* Logo do site */
 .logo {
-  font-size: 1.8rem;
-  font-weight: bold;
+  font-size: 1.8rem;    /* CONTENT: Tamanho da fonte aumentado */
+  font-weight: bold;    /* Negrito */
 }
 
 /* Navegação principal */
 .nav-main {
-  display: flex;
+  /* === FLEXBOX: Container do menu === */
+  display: flex;        /* Ativa Flexbox para o nav */
 }
 
+/* Lista de navegação */
 .nav-list {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+  list-style: none;     /* Remove marcadores da lista */
+  /* === FLEXBOX: Organiza itens horizontalmente === */
+  display: flex;        /* Ativa Flexbox */
+  gap: 20px;           /* Espaço de 20px entre itens (substitui margins) */
 }
 
+/* Links individuais do menu */
 .nav-item a {
+  /* PADDING: Espaçamento interno do link */
   padding: 8px 12px;
+  
+  /* BORDER: Borda transparente (aparece no hover) */
   border: 2px solid transparent;
   border-radius: 4px;
+  
+  /* Transições suaves para hover */
   transition: background-color 0.3s, border-color 0.3s;
 }
 
+/* Efeito hover nos links do menu */
 .nav-item a:hover {
-  background-color: #007bff;
-  border-color: #fff;
+  background-color: #007bff;  /* Fundo azul ao passar mouse */
+  border-color: #fff;         /* BORDER: Borda branca aparece */
   border-radius: 5px;
 }
 
-/* ======================================
-   MENU HAMBÚRGUER (mobile)
-====================================== */
+/* ================================= MENU HAMBÚRGUER (mobile) ================================== */
+
+/* Checkbox que controla o menu (escondido) */
 .menu-toggle {
-  display: none;
+  display: none;  /* Nunca visível, apenas funcional */
 }
 
+/* Ícone hamburger (3 linhas) */
 .menu-icon {
-  display: none;
-  flex-direction: column;
-  justify-content: space-around;
+  display: none;              /* Escondido em desktop */
+  
+  /* === FLEXBOX: Organiza as 3 linhas verticalmente === */
+  flex-direction: column;     /* Empilha linhas verticalmente */
+  justify-content: space-around; /* Distribui espaço entre linhas */
   width: 30px;
   height: 22px;
-  cursor: pointer;
+  cursor: pointer;            /* Cursor de mão ao passar mouse */
 }
 
 .menu-icon span {
   height: 3px;
   width: 100%;
-  background-color: white;
-  border-radius: 5px;
+  
+  background-color: white;    /* Cor branca */
+  border-radius: 5px;        /* Cantos arredondados */
 }
 
-/* ======================================
-   BANNER
-====================================== */
+/* ============================== BANNER ============================ */
+
 .banner {
+  /* CONTENT: Gradiente linear diagonal */
   background: linear-gradient(135deg, #0066cc, #0099ff);
-  color: white;
+  color: white;               /* Texto branco */
+  
+  /* PADDING: Espaço interno vertical */
   padding: 60px 0;
-  text-align: center;
+  text-align: center;         /* Centraliza texto */
 }
 
 .banner-content {
+  /* CONTENT: Controle de largura */
   width: 95%;
   max-width: 1000px;
+  
+  /* MARGIN: Centralização horizontal */
   margin: 0 auto;
 }
 
+/* Título do banner */
 .banner-content h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
+  font-size: 2rem;            /* CONTENT: Título grande */
+  margin-bottom: 15px;        /* MARGIN: Espaço abaixo */
 }
 
+/* Subtítulo do banner */
 .banner-content p {
-  font-size: 1.1rem;
+  font-size: 1.1rem;          /* CONTENT: Texto levemente maior */
 }
 
-/* ======================================
-   CONTEÚDO PRINCIPAL
-====================================== */
+/* ====================================== CONTEÚDO PRINCIPAL ====================================== */
+
+/* Container principal com posts e sidebar */
 .main-content {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
+  /* === FLEXBOX: Layout de 2 colunas === */
+  display: flex;                    /* Ativa Flexbox */
+  justify-content: space-between;   /* Espaço entre posts e sidebar */
+  gap: 30px;                       /* Espaço de 30px entre colunas */
+  flex-direction: row;             /* Direção horizontal (padrão) */
+  /* CONTENT: Controle de largura */
   width: 90%;
   max-width: 1200px;
+  /* MARGIN: Centralização e espaçamento */
   margin: 40px auto;
-  flex-direction: row;
 }
 
-/* Posts */
+/* ====================================== POSTS (ÁREA PRINCIPAL) ====================================== */
+
+/* Container dos posts */
 .posts {
-  flex: 3;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  /* === FLEXBOX: Coluna flexível === */
+  flex: 3;                  /* Ocupa 3 partes do espaço (75%) */
+  display: flex;            /* Ativa Flexbox */
+  flex-direction: column;   /* Empilha posts verticalmente */
+  gap: 20px;               /* Espaço de 20px entre posts */
 }
 
+/* Card individual de post */
 .post {
-  background-color: #fff;
+  background-color: #fff;   /* CONTENT: Fundo branco */
+  
+  /* BORDER: Borda cinza clara */
   border: 2px solid #ddd;
-  padding: 20px;
   border-radius: 6px;
+  
+  /* PADDING: Espaçamento interno */
+  padding: 20px;
+  
+  /* === FLEXBOX: Organiza conteúdo do card === */
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: column;         /* Empilha elementos verticalmente */
+  justify-content: space-between; /* Distribui espaço (botão no final) */
+  
+  /* Transição para efeito hover */
   transition: transform 0.3s;
 }
 
+/* Efeito hover - aumenta levemente o card */
 .post:hover {
-  transform: scale(1.02);
+  transform: scale(1.02);  /* Aumenta 2% */
 }
 
+/* Imagem do post */
 .post img {
+  /* CONTENT: Controle de dimensões */
   width: 100%;
   max-height: 400px;
-  object-fit: cover;
+  object-fit: cover;      /* Cobre área sem distorcer */
   border-radius: 2px;
+  
+  /* MARGIN: Espaço abaixo da imagem */
   margin-bottom: 5px;
 }
 
+/* Título do post */
 .post-title {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
+  font-size: 1.3rem;        /* CONTENT: Tamanho do título */
+  margin-bottom: 10px;      /* MARGIN: Espaço abaixo */
 }
 
+/* Resumo/excerpt do post */
 .post-excerpt {
-  flex-grow: 1;
-  margin-bottom: 15px;
+  /* === FLEXBOX: Cresce para ocupar espaço disponível === */
+  flex-grow: 1;             /* Expande para empurrar botão para baixo */
+  margin-bottom: 15px;      /* MARGIN: Espaço abaixo */
 }
 
+/* Botão "Leia mais" */
 .read-more {
-  align-self: flex-start;
+  /* === FLEXBOX: Alinha à esquerda === */
+  align-self: flex-start;   /* Alinha no início (esquerda) */
+  
+  /* PADDING: Espaçamento interno */
   padding: 8px 16px;
+  
+  /* BORDER: Borda azul */
   border: 2px solid #007bff;
   border-radius: 4px;
+  
+  /* Transições suaves */
   transition: background-color 0.3s, color 0.3s;
 }
 
+/* Efeito hover no botão */
 .read-more:hover {
-  background-color: #007bff;
-  color: white;
+  background-color: #007bff;  /* Fundo azul */
+  color: white;               /* Texto branco */
 }
 
-/* Sidebar */
+/* ========================= SIDEBAR (ÁREA LATERAL) ========================== */
+
+/* Container da sidebar */
 .sidebar {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  /* === FLEXBOX: Coluna flexível === */
+  flex: 1;                  /* Ocupa 1 parte do espaço (25%) */
+  display: flex;            /* Ativa Flexbox */
+  flex-direction: column;   /* Empilha widgets verticalmente */
+  gap: 30px;               /* Espaço entre widgets */
 }
 
+/* Widget individual */
 .widget {
-  background: white;
+  background: white;        /* CONTENT: Fundo branco */
+  
+  /* BORDER: Borda cinza */
   border: 2px solid #ddd;
   border-radius: 6px;
+  
+  /* PADDING: Espaçamento interno */
   padding: 20px;
 }
 
+/* Título do widget */
 .widget-title {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
+  font-size: 1.3rem;        /* CONTENT: Tamanho do título */
+  margin-bottom: 10px;      /* MARGIN: Espaço abaixo */
 }
 
+/* Lista do widget */
 .widget-list {
-  list-style: none;
+  list-style: none;         /* Remove marcadores */
 }
 
+/* Itens da lista do widget */
 .widget-list li {
-  margin-bottom: 8px;
+  margin-bottom: 8px;       /* MARGIN: Espaço entre itens */
 }
 
-/* ======================================
-   SEÇÃO DE DICAS
-====================================== */
+/* ====================================== SEÇÃO DE DICAS ====================================== */
+
+/* Container genérico de seção */
 .section {
+  /* CONTENT: Controle de largura */
   width: 90%;
   max-width: 1200px;
+  
+  /* MARGIN: Centralização e espaçamento vertical */
   margin: 50px auto;
 }
 
+/* Título da seção */
 .section h2 {
-  font-size: 1.8rem;
+  font-size: 1.8rem;        /* CONTENT: Título grande */
+  
+  /* MARGIN: Espaço abaixo */
   margin-bottom: 20px;
-  text-align: center;
+  text-align: center;       /* Centraliza texto */
   color: #222;
 }
 
+/* Grid/Mural de dicas */
 .dicas-mural {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  /* === FLEXBOX: Grid responsivo === */
+  display: flex;            /* Ativa Flexbox */
+  flex-wrap: wrap;          /* Permite quebra de linha */
+  gap: 20px;               /* Espaço entre cards */
+  justify-content: center;  /* Centraliza cards */
 }
 
+/* Card individual de dica */
 .dica-card {
-  background: #fff;
+  background: #fff;         /* CONTENT: Fundo branco */
+  
+  /* BORDER: Borda cinza */
   border: 2px solid #ddd;
   border-radius: 8px;
+  
+  /* PADDING: Espaçamento interno */
   padding: 20px;
+  
+  /* CONTENT: Largura fixa */
   width: 300px;
+  
+  /* Transição para hover */
   transition: transform 0.3s;
 }
 
+/* Efeito hover - levanta o card */
 .dica-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px);  /* Move 5px para cima */
 }
 
+/* Botão secundário */
 .btn-secondary {
   display: inline-block;
+  
+  /* PADDING: Espaçamento interno */
   padding: 8px 14px;
-  background-color: #007bff;
-  color: white;
+  
+  background-color: #007bff;  /* Fundo azul */
+  color: white;               /* Texto branco */
   border-radius: 4px;
+  
+  /* MARGIN: Espaço acima */
   margin-top: 10px;
 }
 
+/* Hover do botão secundário */
 .btn-secondary:hover {
-  background-color: #0056a3;
+  background-color: #0056a3;  /* Azul mais escuro */
 }
 
-/* ======================================
-   PRODUTOS E SERVIÇOS
-====================================== */
+/* ====================================== PRODUTOS E SERVIÇOS ====================================== */
+
+/* Grid de produtos */
 .produtos-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
-  justify-content: center;
+  /* === FLEXBOX: Grid responsivo === */
+  display: flex;            /* Ativa Flexbox */
+  flex-wrap: wrap;          /* Permite quebra de linha */
+  gap: 25px;               /* Espaço entre produtos */
+  justify-content: center;  /* Centraliza produtos */
 }
 
+/* Card de produto */
 .produto {
-  background: white;
+  background: white;        /* CONTENT: Fundo branco */
+  
+  /* BORDER: Borda cinza */
   border: 2px solid #ddd;
   border-radius: 8px;
+  
+  /* PADDING: Espaçamento interno */
   padding: 20px;
+  
+  /* CONTENT: Largura fixa */
   width: 250px;
-  text-align: center;
+  text-align: center;       /* Centraliza texto */
+  
+  /* Transição para hover */
   transition: transform 0.3s;
 }
 
+/* Efeito hover - aumenta o card */
 .produto:hover {
-  transform: scale(1.05);
+  transform: scale(1.05);   /* Aumenta 5% */
 }
 
+/* Botão primário */
 .btn {
   display: inline-block;
+  
+  /* PADDING: Espaçamento interno */
   padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
+  
+  background-color: #007bff;  /* Fundo azul */
+  color: white;               /* Texto branco */
   border-radius: 5px;
+  
+  /* Transição suave */
   transition: 0.3s;
 }
 
+/* Hover do botão primário */
 .btn:hover {
-  background-color: #0056a3;
+  background-color: #0056a3; 
 }
 
-/* ======================================
-   SEÇÃO FAQ
-====================================== */
+/* ====================================== SEÇÃO FAQ  ====================================== */
+
+/* Container da FAQ */
 .faq-container {
   max-width: 800px;
+  /* MARGIN: Centralização */
   margin: 0 auto;
 }
 
+/* Item individual da FAQ */
 .faq-item {
-  background: white;
+  background: white;        
+  
+  /* BORDER: Borda cinza */
   border: 2px solid #ddd;
   border-radius: 8px;
+  
+  /* MARGIN: Espaço abaixo */
   margin-bottom: 15px;
-  overflow: hidden;
+  overflow: hidden;         /* Esconde conteúdo que excede */
+  
+  /* Transição suave */
   transition: all 0.3s ease;
 }
 
+/* Hover do item FAQ - destaca com borda azul */
 .faq-item:hover {
-  border-color: #007bff;
+  border-color: #007bff;    /* BORDER: Borda azul no hover */
 }
 
+/* Checkbox que controla accordion (escondido) */
 .faq-toggle {
-  display: none;
+  display: none;            /* Nunca visível */
 }
 
+/* Pergunta clicável (label do checkbox) */
 .faq-question {
+  /* === FLEXBOX: Alinha texto e ícone === */
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between;  /* Espaço entre texto e ícone */
+  align-items: center;             /* Alinha verticalmente */
+  
+  /* PADDING: Espaçamento interno */
   padding: 20px;
-  cursor: pointer;
-  font-size: 1.1rem;
-  font-weight: 600;
+  cursor: pointer;          /* Cursor de mão */
+  font-size: 1.1rem;        /* CONTENT: Texto maior */
+  font-weight: 600;         /* Semi-negrito */
   color: #222;
-  user-select: none;
+  user-select: none;        /* Impede seleção de texto */
+  
+  /* Transição suave */
   transition: background-color 0.3s;
 }
 
+/* Hover na pergunta */
 .faq-question:hover {
-  background-color: #f8f9fa;
+  background-color: #f8f9fa;  /* Fundo cinza claro */
 }
 
+/* Ícone + no FAQ */
 .faq-icon {
-  font-size: 1.5rem;
+  font-size: 1.5rem;        /* CONTENT: Ícone grande */
   font-weight: bold;
-  color: #007bff;
+  color: #007bff;           /* Azul */
+  
+  /* Transição para rotação */
   transition: transform 0.3s;
 }
 
+/* Resposta (inicialmente escondida) */
 .faq-answer {
-  max-height: 0;
-  overflow: hidden;
+  /* CONTENT: Altura controlada */
+  max-height: 0;            /* Começa com altura 0 */
+  overflow: hidden;         /* Esconde conteúdo excedente */
+  
+  /* Transições suaves */
   transition: max-height 0.3s ease, padding 0.3s ease;
+  
+  /* PADDING: Inicialmente 0 */
   padding: 0 20px;
 }
 
+/* Parágrafo dentro da resposta */
 .faq-answer p {
-  color: #555;
-  line-height: 1.8;
+  color: #555;              /* Cinza médio */
+  line-height: 1.8;         /* Espaçamento entre linhas */
 }
 
+/* === ESTADO ABERTO: Quando checkbox está marcado === */
+
+/* Expande a resposta */
 .faq-toggle:checked + .faq-question + .faq-answer {
-  max-height: 500px;
+  max-height: 500px;        /* CONTENT: Altura máxima para revelar */
+  
+  /* PADDING: Adiciona espaçamento interno */
   padding: 0 20px 20px 20px;
 }
 
+/* Gira o ícone + para virar X */
 .faq-toggle:checked + .faq-question .faq-icon {
-  transform: rotate(45deg);
+  transform: rotate(45deg); /* Rotaciona 45° (+ vira X) */
 }
 
+/* Destaca pergunta aberta */
 .faq-toggle:checked + .faq-question {
-  background-color: #f8f9fa;
-  border-bottom: 1px solid #ddd;
+  background-color: #f8f9fa;  /* Fundo cinza claro */
+  border-bottom: 1px solid #ddd; /* BORDER: Linha separadora */
 }
 
-/* ======================================
-   NEWSLETTER
-====================================== */
+/* ============================== NEWSLETTER ============================== */
+
+/* Seção de newsletter */
 .newsletter {
-  background-color: #fff;
+  background-color: #fff;   /* CONTENT: Fundo branco */
+  
+  /* BORDER: Linha azul superior */
   border-top: 3px solid #007bff;
+  
+  /* PADDING: Espaçamento interno vertical */
   padding: 40px 0;
+  
+  /* MARGIN: Espaço acima */
   margin-top: 40px;
-  text-align: center;
+  text-align: center;       /* Centraliza conteúdo */
 }
 
+/* Container interno da newsletter */
 .newsletter-inner {
+  /* CONTENT: Controle de largura */
   width: 90%;
   max-width: 600px;
+  
+  /* MARGIN: Centralização horizontal */
   margin: 0 auto;
 }
 
+/* Formulário da newsletter */
 .newsletter-form {
+  /* === FLEXBOX: Alinha input e botão === */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  flex-wrap: wrap;
+  justify-content: center;      /* Centraliza elementos */
+  align-items: center;          /* Alinha verticalmente */
+  gap: 15px;                   /* Espaço entre input e botão */
+  flex-wrap: wrap;             /* Permite quebra em mobile */
 }
 
+/* Campo de input de email */
 .newsletter-form input {
-  flex: 1;
+  /* === FLEXBOX: Cresce para ocupar espaço === */
+  flex: 1;                      /* Expande para preencher espaço */
+  
+  /* PADDING: Espaçamento interno */
   padding: 10px;
+  
+  /* BORDER: Borda cinza */
   border: 2px solid #ccc;
   border-radius: 4px;
 }
 
+/* Botão de submit da newsletter */
 .newsletter-form button {
+  /* PADDING: Espaçamento interno */
   padding: 10px 20px;
+  
+  /* BORDER: Remove borda padrão */
   border: none;
-  background-color: #007bff;
-  color: white;
+  
+  background-color: #007bff;  /* Fundo azul */
+  color: white;               /* Texto branco */
   border-radius: 4px;
-  cursor: pointer;
+  cursor: pointer;            /* Cursor de mão */
 }
 
+/* Hover no botão da newsletter */
 .newsletter-form button:hover {
-  background-color: #0056a3;
+  background-color: #0056a3;  /* Azul mais escuro */
 }
 
-/* ======================================
-   RODAPÉ
-====================================== */
+/* ====================================== RODAPÉ ====================================== */
+
+/* Footer do site */
 .site-footer {
-  background-color: #222;
-  color: white;
-  text-align: center;
+  background-color: #222;   /* CONTENT: Fundo preto/cinza escuro */
+  color: white;             /* Texto branco */
+  text-align: center;       /* Centraliza texto */
+  
+  /* PADDING: Espaçamento interno vertical */
   padding: 30px 0;
+  
+  /* MARGIN: Espaço acima */
   margin-top: 40px;
 }
 
+/* Container interno do footer */
 .footer-inner {
+  /* CONTENT: Controle de largura */
   width: 90%;
   max-width: 1200px;
+  
+  /* MARGIN: Centralização horizontal */
   margin: 0 auto;
+  
+  /* === FLEXBOX: Organiza conteúdo verticalmente === */
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
+  flex-direction: column;   /* Empilha elementos verticalmente */
+  align-items: center;      /* Centraliza horizontalmente */
+  gap: 15px;               /* Espaço entre elementos */
 }
 
-/* ======================================
-   RESPONSIVIDADE
-====================================== */
+/* ====================================== RESPONSIVIDADE - TABLET (max-width: 992px) ====================================== */
+
 @media (max-width: 992px) {
+  
+  /* Layout principal vira coluna em tablets */
   .main-content {
-    flex-direction: column;
+    /* === FLEXBOX: Muda direção para coluna === */
+    flex-direction: column;   /* Empilha posts e sidebar */
   }
+  
+  /* Sidebar aparece antes dos posts em mobile */
   .sidebar {
-    order: -1;
+    /* === FLEXBOX: Reordena elementos === */
+    order: -1;                /* Move sidebar para o topo */
   }
 }
+
+/* ====================================== RESPONSIVIDADE - MOBILE (max-width: 768px) ====================================== */
 
 @media (max-width: 768px) {
+  
+  /* ===== MENU HAMBÚRGUER ATIVO ===== */
+  
+  /* Mostra o ícone hamburger */
   .menu-icon {
-    display: flex;
+    /* === FLEXBOX: Ativa display flex === */
+    display: flex;            /* Torna visível em mobile */
   }
 
+  /* Navegação mobile (inicialmente escondida) */
   .nav-main {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background-color: #111;
+    position: absolute;       /* Posicionamento absoluto */
+    top: 60px;               /* Abaixo do header */
+    right: 0;                /* Alinhado à direita */
+    
+    background-color: #111;   /* CONTENT: Fundo preto */
+    
+    /* CONTENT: Ocupa largura total */
     width: 100%;
-    display: none;
-    flex-direction: column;
-    align-items: center;
+    
+    display: none;            /* Escondido por padrão */
+    
+    /* === FLEXBOX: Menu vertical === */
+    flex-direction: column;   /* Empilha itens verticalmente */
+    align-items: center;      /* Centraliza itens */
+    
+    /* PADDING: Espaçamento interno vertical */
     padding: 20px 0;
   }
 
+  /* === ESTADO ABERTO: Quando checkbox está marcado === */
+  /* Mostra menu quando hamburger é clicado */
   .menu-toggle:checked + .menu-icon + .nav-main {
-    display: flex;
+    /* === FLEXBOX: Ativa display === */
+    display: flex;            /* Torna menu visível */
   }
 
+  /* Lista de navegação mobile */
   .nav-list {
-    flex-direction: column;
-    gap: 15px;
+    /* === FLEXBOX: Organização vertical === */
+    flex-direction: column;   /* Empilha links verticalmente */
+    gap: 15px;               /* Espaço reduzido entre links */
   }
 
+  /* ===== LAYOUT MOBILE ===== */
+  
+  /* Conteúdo principal em coluna */
   .main-content {
-    flex-direction: column;
-    align-items: center;
+    /* === FLEXBOX: Layout vertical centralizado === */
+    flex-direction: column;   /* Empilha elementos */
+    align-items: center;      /* Centraliza elementos */
   }
 
-  .posts, .sidebar, .dicas-mural, .produtos-grid {
+  /* Elementos ocupam largura total */
+  .posts, 
+  .sidebar, 
+  .dicas-mural, 
+  .produtos-grid {
+    /* CONTENT: Largura total em mobile */
     width: 100%;
   }
 
+  /* Newsletter em coluna */
   .newsletter-form {
-    flex-direction: column;
+    /* === FLEXBOX: Empilha input e botão === */
+    flex-direction: column;  
   }
 
+  /* ===== AJUSTES DE FAQ ===== */
+  
+  /* Pergunta FAQ menor em mobile */
   .faq-question {
-    font-size: 1rem;
+    font-size: 1rem;         
     padding: 15px;
   }
 }
