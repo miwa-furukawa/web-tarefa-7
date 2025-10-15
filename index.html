@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!-- =================== META CONFIGURAÇÕES BÁSICAS =================== -->
+  <!-- =================== META CONFIGURAÇÕES BÁSICAS =================== -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TechBlog – Inovações & Tecnologia</title>
-    <!-- =================== CSS EXTERNO =================== -->
+
+  <!-- =================== CSS EXTERNO =================== -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- =========================== CABEÇALHO COM MENU HAMBÚRGUER ============================ -->
-   /* Header (logo + menu) */
   <header class="site-header">
     <div class="header-inner">
       <h1 class="logo">TechBlog</h1>
 
-      <!-- Checkbox "hack" para ativar o menu no mobile -->
+      <!-- Checkbox para controlar o menu no mobile -->
       <input type="checkbox" id="menu-toggle" class="menu-toggle">
       <label for="menu-toggle" class="menu-icon">
-        <!-- Ícone de menu hambúrguer -->
         <span></span>
         <span></span>
         <span></span>
@@ -28,10 +27,10 @@
       <nav class="nav-main">
         <ul class="nav-list">
           <li class="nav-item"><a href="#">Home</a></li>
-          <li class="nav-item"><a href="#">Artigos</a></li>
-          <li class="nav-item"><a href="#">Dicas</a></li>
-          <li class="nav-item"><a href="#">Produtos</a></li>
-          <li class="nav-item"><a href="#">Contato</a></li>
+          <li class="nav-item"><a href="#artigos">Artigos</a></li>
+          <li class="nav-item"><a href="#dicas">Dicas</a></li>
+          <li class="nav-item"><a href="#produtos">Produtos</a></li>
+          <li class="nav-item"><a href="#contato">Contato</a></li>
         </ul>
       </nav>
     </div>
@@ -45,127 +44,240 @@
     </div>
   </section>
 
-  <!-- =========================== CONTEÚDO PRINCIPAL + SIDE BAR ============================ -->
-  <main class="main-content">
-    <section class="intro">
+  <!-- =========================== CONTEÚDO PRINCIPAL ============================ -->
+  <main class="main-content" id="artigos">
+
+    <!-- Área de posts -->
+    <section class="posts">
       <h2>Bem-vindo ao TechBlog</h2>
-      
-    <!-- Área de posts (flex principal) -->
-    <div class="posts">
 
-        <!-- post 1 -->
-        <article class="post">
-            <img src="https://files.tecnoblog.net/wp-content/uploads/2015/09/0a0hnvqh1ju.jpg" alt="Post 1" class="Post 1">
-            <h3 class="post-title">Robôs no dia a dia</h3>
-            <p class="post-excerpt">Como os robôs serão incorporados em 2025?</p>
-            <a href="https://blog.pixelfreestudio.com/creating-complex-layouts-with-css-flexbox/" class="read-more">Leia mais →</a>
-         </article>
+      <!-- Post 1 -->
+      <article class="post">
+        <img src="https://files.tecnoblog.net/wp-content/uploads/2015/09/0a0hnvqh1ju.jpg" alt="Robôs no dia a dia">
+        <h3 class="post-title">Robôs no dia a dia</h3>
+        <p class="post-excerpt">Como os robôs serão incorporados em 2025?</p>
+        <a href="https://blog.pixelfreestudio.com/creating-complex-layouts-with-css-flexbox/" class="read-more">Leia mais →</a>
+      </article>
 
-        <!-- post 2 -->
-         <article class="post">
-            <img src="https://otecnico.org/wp-content/uploads/2023/09/image-18-1024x576.png" alt="Post 2" class="Post 2">
-            <h3 class="post-title">Guia de CSS Grid e Flexbox combinados</h3>
-            <p class="post-excerpt">Como combinar Flexbox e Grid para layouts modernos e responsivos.</p>
-            <a href="https://otecnico.org/aprendendo-css-fundamentos-essenciais-do-grid-e-flexbox/" class="read-more">Leia mais →</a>
-        </article>
+      <!-- Post 2 -->
+      <article class="post">
+        <img src="https://otecnico.org/wp-content/uploads/2023/09/image-18-1024x576.png" alt="CSS Grid e Flexbox">
+        <h3 class="post-title">Guia de CSS Grid e Flexbox combinados</h3>
+        <p class="post-excerpt">Como combinar Flexbox e Grid para layouts modernos e responsivos.</p>
+        <a href="https://otecnico.org/aprendendo-css-fundamentos-essenciais-do-grid-e-flexbox/" class="read-more">Leia mais →</a>
+      </article>
 
-        <!-- post 3 -->
-        <article class="post">
-            <img src="https://www.dgaz.com.br/wp-content/uploads/2024/03/Gemini-IA-2-1-jpg.webp" alt="Post 3" class="Post 3">
-            <h3 class="post-title">Google anuncia avanços em IA</h3>
-            <p class="post-excerpt">Novidades no JavaScript, recursos e boas práticas para projetos atuais...</p>
-            <a href="https://www.terra.com.br/byte/google-aponta-avanco-historico-de-ia-mas-especialistas-questionam-impacto-real,6df698f7883f0157187a04ce92c4c97erlx9ph3r.html" class="read-more">Leia mais →</a>
-        </article>
+      <!-- Post 3 -->
+      <article class="post">
+        <img src="https://www.dgaz.com.br/wp-content/uploads/2024/03/Gemini-IA-2-1-jpg.webp" alt="Google IA">
+        <h3 class="post-title">Google anuncia avanços em IA</h3>
+        <p class="post-excerpt">Novas técnicas de aprendizado e redes neurais transformam o mercado.</p>
+        <a href="https://www.terra.com.br/byte/google-aponta-avanco-historico-de-ia-mas-especialistas-questionam-impacto-real,6df698f7883f0157187a04ce92c4c97erlx9ph3r.html" class="read-more">Leia mais →</a>
+      </article>
 
-        <!-- post 4 -->
-        <article class="post">
-            <img src="https://t.ctcdn.com.br/lmtzy3jnwi92B3_e77CWbrg9dFM=/1200x675/smart/i945559.jpeg" alt="Post 4" class="Post 4">
-            <h3 class="post-title">Estreia de processadores mobile</h3>
-            <p class="post-excerpt">Intel revelará CPUs Panther Lake e novos Xeon na Tech Tour 2025 em outubro.</p>
-            <a href="https://canaltech.com.br/hardware/intel-revelara-cpus-panther-lake-e-novos-xeon-na-tech-tour-2025-em-outubro/" class="read-more">Leia mais →</a>
-            </article>
+      <!-- Post 4 -->
+      <article class="post">
+        <img src="https://t.ctcdn.com.br/lmtzy3jnwi92B3_e77CWbrg9dFM=/1200x675/smart/i945559.jpeg" alt="Processadores Mobile">
+        <h3 class="post-title">Estreia de processadores mobile</h3>
+        <p class="post-excerpt">Intel revelará CPUs Panther Lake e novos Xeon na Tech Tour 2025.</p>
+        <a href="https://canaltech.com.br/hardware/intel-revelara-cpus-panther-lake-e-novos-xeon-na-tech-tour-2025-em-outubro/" class="read-more">Leia mais →</a>
+      </article>
 
-        <!-- post 5 -->
-        <article class="post">
-            <img src="https://tremdimensional4d.com.br/blog/wp-content/uploads/2024/08/Impressao-3D.jpg" alt="Post 5" class="Post 5">
-            <h3 class="post-title">Impressão 3D no futuro</h3>
-            <p class="post-excerpt">Mercado de impressão 3D abre espaço para as micro e pequenas empresas.</p>
-            <a href="https://sebrae.com.br/sites/PortalSebrae/sebraeaz/impressao-3d-abre-espaco-para-novos-modelos-de-negocio,371160df0f451510VgnVCM1000004c00210aRCRD" class="read-more">Leia mais →</a>
-        </article>
-    </section>
+      <!-- Post 5 -->
+      <article class="post">
+        <img src="https://tremdimensional4d.com.br/blog/wp-content/uploads/2024/08/Impressao-3D.jpg" alt="Impressão 3D">
+        <h3 class="post-title">Impressão 3D no futuro</h3>
+        <p class="post-excerpt">Mercado de impressão 3D abre espaço para pequenas empresas.</p>
+        <a href="https://sebrae.com.br/sites/PortalSebrae/sebraeaz/impressao-3d-abre-espaco-para-novos-modelos-de-negocio,371160df0f451510VgnVCM1000004c00210aRCRD" class="read-more">Leia mais →</a>
+      </article>
 
-           <!-- post 6 -->
-        <article class="post">
-            <img src="https://img.soy-chile.cl/Fotos/2024/05/27/file_20240527114558.jpg" alt="Post 6" class="Post 6">
-            <h3 class="post-title">ChatGPT e o uso por menores</h3>
-            <p class="post-excerpt">ChatGPT agora permite controlar o uso por menores e avisa pais sobre conversas sensíveis; saiba como ativar.</p>
-            <a href="https://g1.globo.com/inovacao/noticia/2025/09/30/chatgpt-agora-permite-controlar-o-uso-por-menores-e-avisa-pais-sobre-conversas-sensiveis-saiba-como-ativar.ghtml" class="read-more">Leia mais →</a>
-        </article>
-    </section>
+      <!-- Post 6 -->
+      <article class="post">
+        <img src="https://img.soy-chile.cl/Fotos/2024/05/27/file_20240527114558.jpg" alt="ChatGPT e menores">
+        <h3 class="post-title">ChatGPT e o uso por menores</h3>
+        <p class="post-excerpt">Nova atualização permite controle parental e alertas para pais.</p>
+        <a href="https://g1.globo.com/inovacao/noticia/2025/09/30/chatgpt-agora-permite-controlar-o-uso-por-menores-e-avisa-pais-sobre-conversas-sensiveis-saiba-como-ativar.ghtml" class="read-more">Leia mais →</a>
+      </article>
 
-           <!-- post 7 -->
-        <article class="post">
-            <img src="https://s2-g1.glbimg.com/tO_4LItTFOQTV3xJHB7fY89sWqg=/0x0:1200x728/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2025/G/k/tl7BBKQwi6mQACPyFtjA/fotojet-30-.jpg" alt="Post 7" class="Post 7">
-            <h3 class="post-title">TikTok nos EUA</h3>
-            <p class="post-excerpt">Entenda os planos de Trump para controlar o aplicativo chinês.</p>
-            <a href="https://g1.globo.com/economia/noticia/2025/09/26/entenda-os-planos-de-trump-para-controlar-o-tiktok.ghtml"  class="read-more">Leia mais →</a>
-        </article>
-    </section>
+      <!-- Post 7 -->
+      <article class="post">
+        <img src="https://s2-g1.glbimg.com/tO_4LItTFOQTV3xJHB7fY89sWqg=/0x0:1200x728/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2025/G/k/tl7BBKQwi6mQACPyFtjA/fotojet-30-.jpg" alt="TikTok EUA">
+        <h3 class="post-title">TikTok nos EUA</h3>
+        <p class="post-excerpt">Entenda os planos de Trump para controlar o aplicativo chinês.</p>
+        <a href="https://g1.globo.com/economia/noticia/2025/09/26/entenda-os-planos-de-trump-para-controlar-o-tiktok.ghtml" class="read-more">Leia mais →</a>
+      </article>
 
-           <!-- post 8 -->
-        <article class="post">
-            <img src="https://redacao.rhpravoce.com.br/wp-content/uploads/2024/09/IA-e-o-impacto-no-trabalho-IMG-I.png" alt="Post 8" class="Post 8">
-            <h3 class="post-title">Uso de Inteligência Artificial no trabalho</h3>
-            <p class="post-excerpt">Em dois anos, empresas brasileiras que utilizavam IA passaram de 16,9% para 41,9%.</p>
-            <a href="https://g1.globo.com/trabalho-e-carreira/noticia/2025/09/24/uso-de-inteligencia-artificial-no-trabalho-na-industria-brasileira-ibge.ghtml" class="read-more">Leia mais →</a>
-        </article>
-    </section>
-
-           <!-- post 9 -->
-        <article class="post">
-            <img src="https://s2-g1.glbimg.com/wyYLFoFj6zDlZGf1uo18VsbdZX4=/5184x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2021/b/H/woqlKySeG6BsfeEK1gfg/2021-09-09t184655z-2067533641-rc2imp9qsldc-rtrmadp-3-health-coronavirus-microsoft.jpg" alt="Post 9" class="Post 9">
-            <h3 class="post-title">Microsoft desativa seus serviços em Israel</h3>
-            <p class="post-excerpt">Empresa desativa serviços usados por Israel após uso para vigilância em Gaza e na Cisjordânia.</p>
-            <a href="https://g1.globo.com/tecnologia/noticia/2025/09/25/microsoft-desativa-servicos-usados-por-unidade-militar-de-israel.ghtml" class="read-more">Leia mais →</a>
-        </article>
-    </section>
-
-           <!-- post 5 -->
-        <article class="post">
-            <img src="https://tremdimensional4d.com.br/blog/wp-content/uploads/2024/08/Impressao-3D.jpg" alt="Post 5" class="Post 5">
-            <h3 class="post-title">Impressão 3D no futuro</h3>
-            <p class="post-excerpt">Mercado de impressão 3D abre espaço para as micro e pequenas empresas.</p>
-            <a href="https://sebrae.com.br/sites/PortalSebrae/sebraeaz/impressao-3d-abre-espaco-para-novos-modelos-de-negocio,371160df0f451510VgnVCM1000004c00210aRCRD" class="read-more">Leia mais →</a>
-        </article>
+      <!-- Post 8 -->
+      <article class="post">
+        <img src="https://redacao.rhpravoce.com.br/wp-content/uploads/2024/09/IA-e-o-impacto-no-trabalho-IMG-I.png" alt="IA no trabalho">
+        <h3 class="post-title">Uso de IA no trabalho</h3>
+        <p class="post-excerpt">Empresas brasileiras ampliam uso de IA de 16,9% para 41,9% em dois anos.</p>
+        <a href="https://g1.globo.com/trabalho-e-carreira/noticia/2025/09/24/uso-de-inteligencia-artificial-no-trabalho-na-industria-brasileira-ibge.ghtml" class="read-more">Leia mais →</a>
+      </article>
     </section>
 
     <!-- Sidebar lateral -->
     <aside class="sidebar">
       <div class="widget">
         <h4 class="widget-title">TechBlog</h4>
-        <p>Blog dedicado para entusiastas em tecnologia e educação, criando conteúdo acessível para todos.</p>
+        <p>Blog dedicado a entusiastas em tecnologia e educação, com conteúdo acessível e atualizado.</p>
       </div>
 
       <div class="widget">
         <h4 class="widget-title">Posts recentes</h4>
         <ul class="widget-list">
-            <li><a href="https://www.apple.com/br/iphone-17-pro/">Apple lança novo iPhone</a></li>
-            <li><a href="https://www.cnnbrasil.com.br/tecnologia/veja-como-a-realidade-virtual-pode-finalmente-mudar-de-vez-o-entretenimento/">Realidade Virtual em crescimento</a></li>
-            <li><a href="https://tecnoblog.net/noticias/opera-lanca-neon-navegador-por-assinatura-com-ia-para-realizar-tarefas/">Opera lança Neon, navegador por assinatura</a></li>
+          <li><a href="https://www.apple.com/br/iphone-17-pro/">Apple lança novo iPhone</a></li>
+          <li><a href="https://www.cnnbrasil.com.br/tecnologia/veja-como-a-realidade-virtual-pode-finalmente-mudar-de-vez-o-entretenimento/">Realidade Virtual em crescimento</a></li>
+          <li><a href="https://tecnoblog.net/noticias/opera-lanca-neon-navegador-por-assinatura-com-ia-para-realizar-tarefas/">Opera lança Neon, navegador com IA</a></li>
         </ul>
       </div>
     </aside>
   </main>
 
-  <!-- =================== SEÇÃO DE DICAS =================== -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- =================== META CONFIGURAÇÕES BÁSICAS =================== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechBlog – Inovações & Tecnologia</title>
+
+  <!-- =================== CSS EXTERNO =================== -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =========================== CABEÇALHO COM MENU HAMBÚRGUER ============================ -->
+  <header class="site-header">
+    <div class="header-inner">
+      <h1 class="logo">TechBlog</h1>
+
+      <!-- Checkbox para controlar o menu no mobile -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="nav-main">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#">Home</a></li>
+          <li class="nav-item"><a href="#artigos">Artigos</a></li>
+          <li class="nav-item"><a href="#dicas">Dicas</a></li>
+          <li class="nav-item"><a href="#produtos">Produtos</a></li>
+          <li class="nav-item"><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================== BANNER DESTAQUE ============================ -->
+  <section class="banner">
+    <div class="banner-content">
+      <h2>Explorando o futuro da tecnologia</h2>
+      <p>Fique por dentro das novidades em desenvolvimento, IA e inovação digital.</p>
+    </div>
+  </section>
+
+  <!-- =========================== CONTEÚDO PRINCIPAL ============================ -->
+  <main class="main-content" id="artigos">
+
+    <!-- Área de posts -->
+    <section class="posts">
+      <h2>Bem-vindo ao TechBlog</h2>
+
+      <!-- Post 1 -->
+      <article class="post">
+        <img src="https://files.tecnoblog.net/wp-content/uploads/2015/09/0a0hnvqh1ju.jpg" alt="Robôs no dia a dia">
+        <h3 class="post-title">Robôs no dia a dia</h3>
+        <p class="post-excerpt">Como os robôs serão incorporados em 2025?</p>
+        <a href="https://blog.pixelfreestudio.com/creating-complex-layouts-with-css-flexbox/" class="read-more">Leia mais →</a>
+      </article>
+
+      <!-- Post 2 -->
+      <article class="post">
+        <img src="https://otecnico.org/wp-content/uploads/2023/09/image-18-1024x576.png" alt="CSS Grid e Flexbox">
+        <h3 class="post-title">Guia de CSS Grid e Flexbox combinados</h3>
+        <p class="post-excerpt">Como combinar Flexbox e Grid para layouts modernos e responsivos.</p>
+        <a href="https://otecnico.org/aprendendo-css-fundamentos-essenciais-do-grid-e-flexbox/" class="read-more">Leia mais →</a>
+      </article>
+
+      <!-- Post 3 -->
+      <article class="post">
+        <img src="https://www.dgaz.com.br/wp-content/uploads/2024/03/Gemini-IA-2-1-jpg.webp" alt="Google IA">
+        <h3 class="post-title">Google anuncia avanços em IA</h3>
+        <p class="post-excerpt">Novas técnicas de aprendizado e redes neurais transformam o mercado.</p>
+        <a href="https://www.terra.com.br/byte/google-aponta-avanco-historico-de-ia-mas-especialistas-questionam-impacto-real,6df698f7883f0157187a04ce92c4c97erlx9ph3r.html" class="read-more">Leia mais →</a>
+      </article>
+
+      <!-- Post 4 -->
+      <article class="post">
+        <img src="https://t.ctcdn.com.br/lmtzy3jnwi92B3_e77CWbrg9dFM=/1200x675/smart/i945559.jpeg" alt="Processadores Mobile">
+        <h3 class="post-title">Estreia de processadores mobile</h3>
+        <p class="post-excerpt">Intel revelará CPUs Panther Lake e novos Xeon na Tech Tour 2025.</p>
+        <a href="https://canaltech.com.br/hardware/intel-revelara-cpus-panther-lake-e-novos-xeon-na-tech-tour-2025-em-outubro/" class="read-more">Leia mais →</a>
+      </article>
+
+      <!-- Post 5 -->
+      <article class="post">
+        <img src="https://tremdimensional4d.com.br/blog/wp-content/uploads/2024/08/Impressao-3D.jpg" alt="Impressão 3D">
+        <h3 class="post-title">Impressão 3D no futuro</h3>
+        <p class="post-excerpt">Mercado de impressão 3D abre espaço para pequenas empresas.</p>
+        <a href="https://sebrae.com.br/sites/PortalSebrae/sebraeaz/impressao-3d-abre-espaco-para-novos-modelos-de-negocio,371160df0f451510VgnVCM1000004c00210aRCRD" class="read-more">Leia mais →</a>
+      </article>
+
+      <!-- Post 6 -->
+      <article class="post">
+        <img src="https://img.soy-chile.cl/Fotos/2024/05/27/file_20240527114558.jpg" alt="ChatGPT e menores">
+        <h3 class="post-title">ChatGPT e o uso por menores</h3>
+        <p class="post-excerpt">Nova atualização permite controle parental e alertas para pais.</p>
+        <a href="https://g1.globo.com/inovacao/noticia/2025/09/30/chatgpt-agora-permite-controlar-o-uso-por-menores-e-avisa-pais-sobre-conversas-sensiveis-saiba-como-ativar.ghtml" class="read-more">Leia mais →</a>
+      </article>
+
+      <!-- Post 7 -->
+      <article class="post">
+        <img src="https://s2-g1.glbimg.com/tO_4LItTFOQTV3xJHB7fY89sWqg=/0x0:1200x728/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2025/G/k/tl7BBKQwi6mQACPyFtjA/fotojet-30-.jpg" alt="TikTok EUA">
+        <h3 class="post-title">TikTok nos EUA</h3>
+        <p class="post-excerpt">Entenda os planos de Trump para controlar o aplicativo chinês.</p>
+        <a href="https://g1.globo.com/economia/noticia/2025/09/26/entenda-os-planos-de-trump-para-controlar-o-tiktok.ghtml" class="read-more">Leia mais →</a>
+      </article>
+
+      <!-- Post 8 -->
+      <article class="post">
+        <img src="https://redacao.rhpravoce.com.br/wp-content/uploads/2024/09/IA-e-o-impacto-no-trabalho-IMG-I.png" alt="IA no trabalho">
+        <h3 class="post-title">Uso de IA no trabalho</h3>
+        <p class="post-excerpt">Empresas brasileiras ampliam uso de IA de 16,9% para 41,9% em dois anos.</p>
+        <a href="https://g1.globo.com/trabalho-e-carreira/noticia/2025/09/24/uso-de-inteligencia-artificial-no-trabalho-na-industria-brasileira-ibge.ghtml" class="read-more">Leia mais →</a>
+      </article>
+    </section>
+
+    <!-- Sidebar lateral -->
+    <aside class="sidebar">
+      <div class="widget">
+        <h4 class="widget-title">TechBlog</h4>
+        <p>Blog dedicado a entusiastas em tecnologia e educação, com conteúdo acessível e atualizado.</p>
+      </div>
+
+      <div class="widget">
+        <h4 class="widget-title">Posts recentes</h4>
+        <ul class="widget-list">
+          <li><a href="https://www.apple.com/br/iphone-17-pro/">Apple lança novo iPhone</a></li>
+          <li><a href="https://www.cnnbrasil.com.br/tecnologia/veja-como-a-realidade-virtual-pode-finalmente-mudar-de-vez-o-entretenimento/">Realidade Virtual em crescimento</a></li>
+          <li><a href="https://tecnoblog.net/noticias/opera-lanca-neon-navegador-por-assinatura-com-ia-para-realizar-tarefas/">Opera lança Neon, navegador com IA</a></li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+
+<!-- =================== SEÇÃO DE DICAS =================== -->
     <section id="dicas" class="section">
         <h2>Dicas de Tecnologia</h2>
-        <p>Passe o mouse sobre cada dica para ver o conteúdo detalhado e clique em "Ler mais" para acessar a página completa.</p>
 
         <!-- Mural de dicas -->
         <div class="dicas-mural">
 
-             <!-- Dica 1 -->
+             <!-- Dica 10 -->
             <div class="dica-card">
                 <h3>Organize seus arquivos digitais</h3>
                 <div class="dica-texto">
@@ -259,46 +371,36 @@
         </div>
     </section>
 
-    <!-- =================== SEÇÃO PRODUTOS =================== -->
-    <section id="produtos" class="section">
-        <h2>Produtos e Serviços</h2>
-        <div class="produtos-grid">
-
-            <!-- Plano Básico -->
-            <div class="produto">
-                <h3>Plano Básico</h3>
-                <p>Acesso a conteúdos exclusivos.</p>
-                <p><strong>R$ 19,90/mês</strong></p>
-                <a href="#" class="btn">Assinar</a>
-            </div>
-
-            <!-- Plano Avançado -->
-            <div class="produto">
-                <h3>Plano Avançado</h3>
-                <p>Inclui tutoriais premium e suporte.</p>
-                <p><strong>R$ 39,90/mês</strong></p>
-                <a href="#" class="btn">Assinar</a>
-            </div>
-
-            <!-- Plano Profissional -->
-            <div class="produto">
-                <h3>Plano Profissional</h3>
-                <p>Todos os recursos + consultoria personalizada.</p>
-                <p><strong>R$ 99,90/mês</strong></p>
-                <a href="#" class="btn">Assinar</a>
-            </div>
-
-            <!-- Plano Empresarial -->
-            <div class="produto">
-                <h3>Plano Empresarial</h3>
-                <p>Treinamentos e suporte para empresas.</p>
-                <p><strong>R$ 199,90/mês</strong></p>
-                <a href="#" class="btn">Assinar</a>
-            </div>
-
-        </div>
-    </section>
-  
+  <!-- =================== SEÇÃO PRODUTOS =================== -->
+  <section id="produtos" class="section">
+    <h2>Produtos e Serviços</h2>
+    <div class="produtos-grid">
+      <div class="produto">
+        <h3>Plano Básico</h3>
+        <p>Acesso a conteúdos exclusivos.</p>
+        <p><strong>R$ 19,90/mês</strong></p>
+        <a href="#" class="btn">Assinar</a>
+      </div>
+      <div class="produto">
+        <h3>Plano Avançado</h3>
+        <p>Inclui tutoriais premium e suporte.</p>
+        <p><strong>R$ 39,90/mês</strong></p>
+        <a href="#" class="btn">Assinar</a>
+      </div>
+      <div class="produto">
+        <h3>Plano Profissional</h3>
+        <p>Todos os recursos + consultoria personalizada.</p>
+        <p><strong>R$ 99,90/mês</strong></p>
+        <a href="#" class="btn">Assinar</a>
+      </div>
+      <div class="produto">
+        <h3>Plano Empresarial</h3>
+        <p>Treinamentos e suporte para empresas.</p>
+        <p><strong>R$ 199,90/mês</strong></p>
+        <a href="#" class="btn">Assinar</a>
+      </div>
+    </div>
+  </section>
 
   <!-- =========================== NEWSLETTER ============================ -->
   <section class="newsletter">
@@ -312,7 +414,7 @@
   </section>
 
   <!-- =========================== RODAPÉ ============================ -->
-  <footer class="site-footer">
+  <footer class="site-footer" id="contato">
     <div class="footer-inner">
       <p>&copy; 2025 TechBlog - Todos os direitos reservados.</p>
       <nav class="footer-nav">
